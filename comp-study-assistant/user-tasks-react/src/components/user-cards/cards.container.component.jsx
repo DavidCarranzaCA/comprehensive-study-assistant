@@ -42,7 +42,7 @@ class UserCards extends React.PureComponent {
 
     onSubmit = e => {
         e.preventDefault();
-        if (this.state.userInput) {
+        if (this.state.userInput.title && this.state.userInput.note) {
             userService.createUser(this.state.userInput)
                 .then(response => {
                     if (response) {
